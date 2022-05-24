@@ -1,0 +1,24 @@
+
+    sf::CircleShape circle(50,10);
+    circle.setFillColor(sf::Color::Green);
+    circle.setPosition(50,160);
+
+    sf::CircleShape circle2(50,10);
+    circle2.setFillColor(sf::Color::Blue);
+    circle2.setPosition(250,160);
+
+    main_win.create(sf::VideoMode(1000,700),"Main Menu",sf::Style::Default);
+    sf::View vw(sf::FloatRect(200,140,150,200));
+    vw.setViewport(sf::FloatRect(.85,5/7.0,.15,2/float(7)));
+    main_win.setView(vw);
+    sf::RectangleShape r(sf::Vector2f(150,200));
+    r.setPosition(200,120);
+    r.setFillColor(sf::Color::Red);
+    main_win.draw(circle);
+    main_win.draw(r);
+    main_win.draw(circle2);
+    main_win.setView(main_win.getDefaultView());
+    main_win.draw(circle);
+    main_win.draw(r);
+    main_win.draw(circle2);
+    //main_win.setView(main_win.getDefaultView());
